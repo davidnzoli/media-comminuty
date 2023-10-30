@@ -1,0 +1,11 @@
+html {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+@import "../styles/body";
+@import "../styles/navbar";
+@import "../styles/footer";
