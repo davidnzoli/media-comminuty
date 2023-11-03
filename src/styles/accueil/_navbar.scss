@@ -1,0 +1,304 @@
+.cont-nav {
+  width: 100%;
+  height: 60px;
+  background-color: $bg-color-1;
+  box-shadow: 0px -5px 5px black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  @include flex-box(20px, row, space-between, center);
+  .item-left {
+    flex: 1;
+    height: 60px;
+    @include flex-box(2px, row, center, center);
+    .icon-cont {
+      @include flex-box(2px, row, center, center);
+      height: 60px;
+      width: 100%;
+      #image-nav {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+      #title-left-nav {
+        font-size: 16px;
+        font-weight: 900;
+        color: $text-color-3;
+        letter-spacing: 1.3px;
+        color: $text-color-1;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    }
+    .menu-respo {
+      display: none;
+    }
+  }
+  .item-medium {
+    flex: 3;
+    height: 60px;
+    @include flex-box(0px, row, center, center);
+    position: relative;
+    #ul-nav {
+      @include flex-box(15px, row, center, center);
+      width: 85%;
+      height: 60px;
+      #list-nav {
+        list-style-type: none;
+        #ancre {
+          padding: 10px;
+          font-size: 15px;
+          font-weight: 800;
+          color: black;
+          letter-spacing: 1px;
+          text-decoration: none;
+        }
+      }
+      & #list-nav > .active {
+        border: 1px solid gray;
+        border-radius: 5px;
+      }
+    }
+  }
+  .item-rigth {
+    flex: 1;
+    height: 60px;
+    @include flex-box(0px, row, center, center);
+    #btn-conn-nav {
+      cursor: pointer;
+      width: 160px;
+      height: 40px;
+      letter-spacing: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      color: $bg-color-1;
+      background-color: $text-color-1;
+    }
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .cont-nav {
+    @include flex-box(5px, row, center, center);
+    .item-left {
+      // background-color: blue;
+      flex: 1.4;
+      @include flex-box(0px, column-reverse, center, center);
+      position: relative;
+      .icon-cont {
+        @include flex-box(0px, column-reverse, center, center);
+        // margin-left: 130px;
+        align-items: end;
+        #image-nav {
+          width: 35px;
+          height: 20px;
+          object-fit: cover;
+        }
+        #title-left-nav {
+          font-size: 14px;
+          font-weight: 800;
+          color: $text-color-3;
+          letter-spacing: 1px;
+          color: $text-color-1;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+      }
+      .menu-respo {
+        display: block;
+        position: absolute;
+        left: 10px;
+        cursor: pointer;
+      }
+    }
+    .item-medium {
+      display: none;
+    }
+    .item-rigth {
+      // background-color: yellow;
+      flex: 1;
+      height: 60px;
+      @include flex-box(0px, row, end, center);
+      padding-right: 10px;
+      #btn-conn-nav {
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        letter-spacing: 1px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: none;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 500;
+        color: $bg-color-1;
+        background-color: $text-color-1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .cont-nav {
+    width: 100%;
+    height: 60px;
+    background-color: $bg-color-1;
+    box-shadow: 0px -5px 5px black;
+    @include flex-box(20px, row, space-between, center);
+    .item-left {
+      flex: 1.3;
+      height: 60px;
+      @include flex-box(2px, row, center, center);
+      .icon-cont {
+        @include flex-box(2px, row, center, center);
+        height: 60px;
+        width: 100%;
+        #image-nav {
+          width: 60px;
+          height: 60px;
+          object-fit: cover;
+        }
+        #title-left-nav {
+          font-size: 16px;
+          font-weight: 900;
+          color: $text-color-3;
+          letter-spacing: 1px;
+          color: $text-color-1;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+      }
+      .menu-respo {
+        display: none;
+      }
+    }
+    .item-medium {
+      flex: 3;
+      height: 60px;
+      @include flex-box(0px, row, center, center);
+      position: relative;
+      #ul-nav {
+        @include flex-box(15px, row, center, center);
+        width: 85%;
+        height: 60px;
+        #list-nav {
+          list-style-type: none;
+          #ancre {
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 800;
+            color: black;
+            letter-spacing: 1px;
+            text-decoration: none;
+          }
+        }
+        & #list-nav > .active {
+          border: 1px solid gray;
+          border-radius: 5px;
+        }
+      }
+    }
+    .item-rigth {
+      flex: 1;
+      height: 60px;
+      @include flex-box(0px, row, center, center);
+      #btn-conn-nav {
+        cursor: pointer;
+        width: 160px;
+        height: 40px;
+        letter-spacing: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $bg-color-1;
+        background-color: $text-color-1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 891px) {
+  .cont-nav {
+    width: 100%;
+    height: 60px;
+    background-color: $bg-color-1;
+    box-shadow: 0px -5px 5px black;
+    @include flex-box(20px, row, space-between, center);
+    .item-left {
+      flex: 1;
+      height: 60px;
+      @include flex-box(2px, row, center, center);
+      .icon-cont {
+        @include flex-box(2px, row, center, center);
+        height: 60px;
+        width: 100%;
+        #image-nav {
+          width: 60px;
+          height: 60px;
+          object-fit: cover;
+        }
+        #title-left-nav {
+          font-size: 16px;
+          font-weight: 900;
+          color: $text-color-3;
+          letter-spacing: 1.3px;
+          color: $text-color-1;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+      }
+      .menu-respo {
+        display: none;
+      }
+    }
+    .item-medium {
+      flex: 3;
+      height: 60px;
+      @include flex-box(0px, row, center, center);
+      position: relative;
+      #ul-nav {
+        @include flex-box(15px, row, center, center);
+        width: 85%;
+        height: 60px;
+        #list-nav {
+          list-style-type: none;
+          #ancre {
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 800;
+            color: black;
+            letter-spacing: 1px;
+            text-decoration: none;
+          }
+        }
+        & #list-nav > .active {
+          border: 1px solid gray;
+          border-radius: 5px;
+        }
+      }
+    }
+    .item-rigth {
+      flex: 1;
+      height: 60px;
+      @include flex-box(0px, row, center, center);
+      #btn-conn-nav {
+        cursor: pointer;
+        width: 160px;
+        height: 40px;
+        letter-spacing: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $bg-color-1;
+        background-color: $text-color-1;
+      }
+    }
+  }
+}

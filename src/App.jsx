@@ -1,10 +1,17 @@
-import Body from "./pages/Body";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Body from "./accueil/Body";
+import Navbar from "./accueil/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <Body />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Body />} />
+        {/* <Route path="/article" element={<Article />} />
+        <Route path="/contact" element={<Contact />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
