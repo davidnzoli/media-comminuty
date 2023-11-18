@@ -1,0 +1,127 @@
+.contact-component {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 85%;
+  height: 500px;
+  background-color: white;
+  transition: 0.5s ease-in-out;
+  &:hover {
+    transform: scale(102%);
+    box-shadow: -5px 5px 10px rgb(219, 219, 219);
+  }
+  .formulaires-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    .title-dessus {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+  }
+  .divImage {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    #image-contact {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+@media screen and (min-width: 0px) {
+  .contact-component {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .formulaires-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      #mail {
+        width: 250px;
+        height: 20px;
+      }
+      #nom {
+        width: 250px;
+        height: 20px;
+      }
+      #objet {
+        width: 280px;
+        height: 100px;
+        padding-left: 10px;
+      }
+      #btn-contact {
+        width: 250px;
+        height: 35px;
+        border-radius: 100px;
+      }
+      .title-dessus {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+      }
+    }
+    .divImage {
+      #image-contact {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 907px) {
+  .contact-component {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 85%;
+    height: 500px;
+    background-color: white;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      transform: scale(102%);
+      box-shadow: -5px 5px 10px rgb(219, 219, 219);
+    }
+    .formulaires-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+      #btn-contact {
+        width: 40%;
+        height: 35px;
+        border-radius: 2px;
+      }
+      .title-dessus {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+      }
+    }
+    .divImage {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      #image-contact {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+}

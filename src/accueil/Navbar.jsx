@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -26,12 +26,12 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li id="list-nav">
-              <NavLink to="/article" id="ancre">
+              <NavLink to="/Article" id="ancre">
                 Article
               </NavLink>
             </li>
             <li id="list-nav">
-              <NavLink to="/contact" id="ancre">
+              <NavLink to="/Contact" id="ancre">
                 Contact
               </NavLink>
             </li>

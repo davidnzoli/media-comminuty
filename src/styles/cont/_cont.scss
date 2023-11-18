@@ -1,0 +1,107 @@
+.contact {
+  width: 100%;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  #h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(255, 170, 11);
+  }
+  .localisation {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .card-cont {
+      width: 250px;
+      height: 180px;
+      background-color: rgb(138, 195, 248);
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      padding-left: 30px;
+      transition: 0.5s all ease;
+      &:hover {
+        transform: scale(102%);
+        box-shadow: 5px 5px 10px rgb(196, 196, 196);
+      }
+    }
+  }
+  .glob-contact-compo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .contact {
+    padding-top: 100px;
+    .localisation {
+      flex-direction: column;
+      gap: 20px;
+      .card-cont {
+        width: 98%;
+        height: 180px;
+      }
+    }
+    .glob-contact-compo {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 907px) {
+  .contact {
+    width: 100%;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    .localisation {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      .card-cont {
+        width: 250px;
+        height: 180px;
+        background-color: rgb(138, 195, 248);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding-left: 30px;
+        transition: 0.5s all ease;
+        &:hover {
+          transform: scale(102%);
+          box-shadow: 5px 5px 10px rgb(196, 196, 196);
+        }
+      }
+    }
+    .glob-contact-compo {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

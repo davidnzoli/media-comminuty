@@ -40,17 +40,18 @@
     @include flex-box(0px, row, center, center);
     position: relative;
     #ul-nav {
-      @include flex-box(15px, row, center, center);
+      @include flex-box(10px, row, center, center);
       width: 85%;
       height: 60px;
+
+      padding-top: 20px;
       #list-nav {
         list-style-type: none;
         #ancre {
           padding: 10px;
           font-size: 15px;
-          font-weight: 800;
-          color: black;
-          letter-spacing: 1px;
+          font-weight: 600;
+          color: $text-color-2;
           text-decoration: none;
         }
       }
@@ -85,13 +86,12 @@
   .cont-nav {
     @include flex-box(5px, row, center, center);
     .item-left {
-      // background-color: blue;
       flex: 1.4;
       @include flex-box(0px, column-reverse, center, center);
       position: relative;
       .icon-cont {
         @include flex-box(0px, column-reverse, center, center);
-        // margin-left: 130px;
+
         align-items: end;
         #image-nav {
           width: 35px;
@@ -117,8 +117,8 @@
     .item-medium {
       display: none;
     }
+
     .item-rigth {
-      // background-color: yellow;
       flex: 1;
       height: 60px;
       @include flex-box(0px, row, end, center);
@@ -188,9 +188,8 @@
           #ancre {
             padding: 10px;
             font-size: 15px;
-            font-weight: 800;
-            color: black;
-            letter-spacing: 1px;
+            font-weight: 600;
+            color: $text-color-2;
             text-decoration: none;
           }
         }
@@ -269,10 +268,10 @@
           #ancre {
             padding: 10px;
             font-size: 15px;
-            font-weight: 800;
-            color: black;
-            letter-spacing: 1px;
+            font-weight: 600;
+            color: $text-color-2;
             text-decoration: none;
+            transition: border 10s;
           }
         }
         & #list-nav > .active {

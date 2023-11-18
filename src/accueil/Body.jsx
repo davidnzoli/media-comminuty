@@ -3,6 +3,15 @@ import GridItems from "../components/Grid";
 import SecVision from "../components/SecVision";
 import { Button } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import PhoneIcon from "@mui/icons-material/Phone";
+import Contact from "../components/Contact";
+
+// import BottomNavigation from "@mui/material/BottomNavigation";
+// import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+// import FolderIcon from "@mui/icons-material/Folder";
+// import RestoreIcon from "@mui/icons-material/Restore";
+// import FavoriteIcon from "@mui/icons-material/Favorite";
+// import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 function Defile() {
   const Clicked = () => {
@@ -18,7 +27,7 @@ function Defile() {
         position: "fixed",
         right: "5px",
         top: "500px",
-        borderRadius: "50px",
+        borderRadius: "100%",
         border: "none",
         padding: "5px",
         backgroundColor: "rgb(9, 104, 228)",
@@ -51,16 +60,17 @@ export default function Body() {
     }
   }, []);
 
-  window.addEventListener("scroll", Effet);
-  function Effet() {
-    const item = document.querySelector(".glob-vision-left");
-    const { scrollTop, clientHeight } = document.documentElement;
-    console.log(scrollTop, clientHeight);
-    const affiche = item.getBoundingClientRect().top;
-    if (scrollTop > (scrollTop + affiche).toFixed() - clientHeight * 0.5) {
-      item.classList.add("activ");
-    }
-  }
+  // useEffect(() => {
+  //   window.addEventListener("scroll", Effet);
+  //   function Effet() {
+  //     const item = document.querySelector(".glob-vision-left");
+  //     const { scrollTop, clientHeight } = document.documentElement;
+  //     const affiche = item.getBoundingClientRect().top;
+  //     if (scrollTop > (scrollTop + affiche).toFixed() - clientHeight * 0.5) {
+  //       item.classList.add("activ");
+  //     }
+  //   }
+  // }, []);
 
   return (
     <div className="cont-body" style={{ position: "relative" }}>
@@ -113,6 +123,13 @@ export default function Body() {
               );
             });
           })}
+          <Button
+            variant="contained"
+            color="primary"
+            startIcon={<PhoneIcon fontSize="small" />}
+          >
+            Nous contactez
+          </Button>
         </div>
 
         <div className="glob-service-rigth">
@@ -127,6 +144,16 @@ export default function Body() {
                     {it.contenu.map((img) => {
                       return (
                         <div className="carte">
+                          <p
+                            style={{
+                              borderRadius: "10px",
+                              padding: "10px",
+                              backgroundColor: "rgb(237, 235, 235)",
+                              color: "rgb(9, 104, 228)",
+                            }}
+                          >
+                            {img.iconService}
+                          </p>
                           <h2 id="title-carte-service">{img.title}</h2>
                           <p id="para-carte-service">{img.someTexts}</p>
                         </div>
@@ -139,7 +166,7 @@ export default function Body() {
           })}
         </div>
       </div>
-      <h1>body</h1>
+      <Contact />
     </div>
   );
 }

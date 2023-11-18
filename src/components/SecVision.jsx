@@ -1,3 +1,8 @@
+import DesignServicesOutlinedIcon from "@mui/icons-material/DesignServicesOutlined";
+import SlowMotionVideoOutlinedIcon from "@mui/icons-material/SlowMotionVideoOutlined";
+import LocalPrintshopIcon from "@mui/icons-material/LocalPrintshop";
+import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
+
 const SecVision = [
   {
     vision: [
@@ -14,22 +19,26 @@ const SecVision = [
         servtitle: "Nos services",
         contenu: [
           {
+            iconService: <SlowMotionVideoOutlinedIcon fontSize="large" />,
+            title: "Photos & Vidéos",
+            someTexts:
+              " mets à la disposition des entreprises une main d’œuvre compétente et qualifiée dans le domaine du numérique.",
+          },
+          {
+            iconService: <DesignServicesOutlinedIcon fontSize="large" />,
             title: "Design",
             someTexts:
               " mets à la disposition des entreprises une main d’œuvre compétente et qualifiée dans le domaine du numérique.",
           },
           {
-            title: "Design",
+            iconService: <LocalPrintshopIcon fontSize="large" />,
+            title: "Impression Photos",
             someTexts:
               " mets à la disposition des entreprises une main d’œuvre compétente et qualifiée dans le domaine du numérique.",
           },
           {
-            title: "Design",
-            someTexts:
-              " mets à la disposition des entreprises une main d’œuvre compétente et qualifiée dans le domaine du numérique.",
-          },
-          {
-            title: "Design",
+            iconService: <EmojiPeopleIcon fontSize="large" />,
+            title: "Impresion de T-shirt",
             someTexts:
               " mets à la disposition des entreprises une main d’œuvre compétente et qualifiée dans le domaine du numérique.",
           },
