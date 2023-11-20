@@ -78,6 +78,10 @@
       font-weight: 600;
       color: $bg-color-1;
       background-color: $text-color-1;
+      transition: 1s ease all;
+      &:hover {
+        background-color: rgb(214, 155, 4);
+      }
     }
   }
 }

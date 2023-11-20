@@ -5,6 +5,9 @@ import { Button } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import PhoneIcon from "@mui/icons-material/Phone";
 import Contact from "../components/Contact";
+import { NavLink } from "react-router-dom";
+import NavigateBeforeOutlinedIcon from "@mui/icons-material/NavigateBeforeOutlined";
+import NavigateNextOutlinedIcon from "@mui/icons-material/NavigateNextOutlined";
 
 // import BottomNavigation from "@mui/material/BottomNavigation";
 // import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -26,7 +29,7 @@ function Defile() {
       style={{
         position: "fixed",
         right: "5px",
-        top: "500px",
+        top: "540px",
         borderRadius: "100%",
         border: "none",
         padding: "5px",
@@ -123,13 +126,15 @@ export default function Body() {
               );
             });
           })}
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={<PhoneIcon fontSize="small" />}
-          >
-            Nous contactez
-          </Button>
+          <NavLink to="/Contact">
+            <Button
+              variant="contained"
+              color="primary"
+              startIcon={<PhoneIcon fontSize="small" />}
+            >
+              Nous contactez
+            </Button>
+          </NavLink>
         </div>
 
         <div className="glob-service-rigth">

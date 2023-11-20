@@ -88,8 +88,21 @@
     border: none;
     border-radius: 10px;
     background-color: white;
-    position: relative;
     padding: 30px;
+
+    .img-glob-items {
+      position: relative;
+      width: 100%;
+      .btn-navigation {
+        position: absolute;
+        top: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+    }
+
     @include flex-box(0px, column, start, center);
     .contenu-dessu {
       height: 100px;

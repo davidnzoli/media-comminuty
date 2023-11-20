@@ -25,7 +25,9 @@ const Cont = () => {
             </h2>
           </div>
 
-          <h2 style={{ fontSize: "16px", fontWeight: "400" }}>Goma</h2>
+          <h2 style={{ fontSize: "16px", fontWeight: "400" }}>
+            Rdc -Goma / Ville
+          </h2>
         </div>
         <div className="card-cont">
           <div

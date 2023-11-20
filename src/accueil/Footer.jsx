@@ -91,25 +91,20 @@ const Footer = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: "20px",
+                gap: "5px",
               }}
             >
-              <div
-                className="div-propos"
-                style={{ borderRight: "1px solid white", paddingRight: "8px" }}
-              >
-                <p>Learn more Learn more</p>
-                <p>Learn more Learn more</p>
-                <p>Learn more Learn more</p>
-                <p>Learn more Learn more</p>
-                <p>Learn more Learn more</p>
+              <div className="div-propos">
+                <p id="para-card-footer">
+                  Learn more Learn more Learn more Learn more Learn more Learn
+                  more Learn more Learn more Learn more Learn more
+                </p>
               </div>
               <div className="div-propos">
-                <p>Learn more Learn more</p>
-                <p>Learn more Learn more</p>
-                <p>Learn more Learn more</p>
-                <p>Learn more Learn </p>
-                <p>Learn more </p>
+                <p id="para-card-footer">
+                  Learn more Learn more Learn more Learn more Learn more Learn
+                  more Learn more Learn Learn more
+                </p>
               </div>
             </div>
           </div>
