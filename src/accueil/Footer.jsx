@@ -4,6 +4,7 @@ import DesignServicesOutlinedIcon from "@mui/icons-material/DesignServicesOutlin
 import SlowMotionVideoOutlinedIcon from "@mui/icons-material/SlowMotionVideoOutlined";
 import LocalPrintshopIcon from "@mui/icons-material/LocalPrintshop";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
+import DartMode from "../components/theme/DartMode";
 
 const Footer = () => {
   return (
@@ -131,7 +132,17 @@ const Footer = () => {
       </div>
       <div className="copyright">
         <p id="copy">Tout droit réservé année 2023</p>
-        <p id="media">Médias/Goma</p>
+        <p
+          id="media"
+          style={{
+            display: "flex",
+            gap: "3px",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          Médias/Goma <DartMode />
+        </p>
       </div>
     </div>
   );

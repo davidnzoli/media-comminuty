@@ -1,3 +1,13 @@
+$redcolor: red;
+$whitecolor: white;
+$blackcolor: black;
+$text-color-1: orange;
+$bluecolor: blue;
+
+[data-theme="dark"] {
+  background-color: rgb(71, 70, 70);
+  color: rgb(171, 169, 169);
+}
 body {
   margin: 0px;
   padding: 0px;

@@ -9,15 +9,6 @@ import { NavLink } from "react-router-dom";
 import NavigateBeforeOutlinedIcon from "@mui/icons-material/NavigateBeforeOutlined";
 import NavigateNextOutlinedIcon from "@mui/icons-material/NavigateNextOutlined";
 
-// import BottomNavigation from "@mui/material/BottomNavigation";
-// import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-// import FolderIcon from "@mui/icons-material/Folder";
-// import RestoreIcon from "@mui/icons-material/Restore";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
-// import LocationOnIcon from "@mui/icons-material/LocationOn";
-const accueil = () => {
-  return <React.Fragment></React.Fragment>;
-};
 function Defile() {
   const Clicked = () => {
     return window.scrollTo({
@@ -48,6 +39,7 @@ function Defile() {
     </div>
   );
 }
+
 export default function Body() {
   const [normal, changement] = useState(false);
 
