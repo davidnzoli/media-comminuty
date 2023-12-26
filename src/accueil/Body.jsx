@@ -93,7 +93,9 @@ export default function Body() {
       </div>
       <div className="btn-material">
         <Button variant="text">Reservation</Button>
-        <Button variant="outlined">Contactez-nous</Button>
+        <NavLink to="/Contact">
+          <Button variant="outlined">Contactez-nous</Button>
+        </NavLink>
       </div>
       <div className="grid-cont-4">
         {GridItems.map((el) => {
@@ -171,8 +173,6 @@ export default function Body() {
         </div>
       </div>
       <Contact />
-      {/* <MenuRespo active={activation} setactive={setactivation} />
-      <Navbar action={activation} setaction={setactivation} /> */}
     </div>
   );
 }
