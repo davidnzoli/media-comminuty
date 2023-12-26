@@ -1,3 +1,6 @@
+.active {
+  overflow: hidden;
+}
 .cont-nav {
   width: 100%;
   height: 60px;
@@ -39,11 +42,13 @@
     height: 60px;
     @include flex-box(0px, row, center, center);
     position: relative;
+    // .close {
+    //   display: none;
+    // }
     #ul-nav {
       @include flex-box(10px, row, center, center);
       width: 85%;
       height: 60px;
-
       padding-top: 20px;
       #list-nav {
         list-style-type: none;
@@ -60,6 +65,15 @@
         border-radius: 5px;
       }
     }
+    .btn-respo {
+      display: none;
+    }
+    .close-click {
+      display: none;
+    }
+    .logo-imge {
+      display: none;
+    }
   }
   .item-rigth {
     flex: 1;
@@ -69,7 +83,7 @@
       cursor: pointer;
       width: 160px;
       height: 40px;
-      letter-spacing: 1px;
+
       padding-left: 15px;
       padding-right: 15px;
       border: none;
@@ -119,7 +133,58 @@
       }
     }
     .item-medium {
-      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(255, 255, 255, 0.436);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      height: 100vh;
+      left: -100vw;
+
+      z-index: 100;
+      visibility: hidden;
+      #ul-nav {
+        @include flex-box(20px, column, center, center);
+        // margin-bottom: 200px;
+        width: 50%;
+        height: 180px;
+        padding-top: 0px;
+        padding: 0px;
+
+        #list-nav {
+          list-style-type: none;
+          #ancre {
+            padding: 12px 60px;
+            font-size: 18px;
+            font-weight: 800;
+            color: blue;
+            text-decoration: none;
+          }
+        }
+        & #list-nav > .active {
+          color: red;
+        }
+      }
+      .btn-respo {
+        display: block;
+      }
+      .close-click {
+        display: block;
+      }
+      .logo-imge {
+        display: block;
+      }
+    }
+    .action {
+      left: 0;
+      visibility: visible;
+      transition: all 0.5s ease-in;
     }
 
     .item-rigth {
@@ -128,18 +193,18 @@
       @include flex-box(0px, row, end, center);
       padding-right: 10px;
       #btn-conn-nav {
-        cursor: pointer;
         width: 100px;
-        height: 30px;
+        height: 32px;
         letter-spacing: 1px;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+        box-shadow: none;
         border: none;
-        border-radius: 50px;
         font-size: 13px;
-        font-weight: 500;
+        font-weight: 600;
         color: $bg-color-1;
         background-color: $text-color-1;
+        z-index: 1;
       }
     }
   }
@@ -182,7 +247,17 @@
       flex: 3;
       height: 60px;
       @include flex-box(0px, row, center, center);
-      position: relative;
+
+      position: static;
+      right: auto;
+      top: auto;
+      left: 0vw;
+      transition: none;
+
+      visibility: visible;
+
+      backdrop-filter: initial;
+      z-index: 999;
       #ul-nav {
         @include flex-box(15px, row, center, center);
         width: 85%;
@@ -202,25 +277,41 @@
           border-radius: 5px;
         }
       }
-    }
-    .item-rigth {
-      flex: 1;
-      height: 60px;
-      @include flex-box(0px, row, center, center);
-      #btn-conn-nav {
-        cursor: pointer;
-        width: 160px;
-        height: 40px;
-        letter-spacing: 1px;
-        padding-left: 15px;
-        padding-right: 15px;
-        border: none;
-        border-radius: 50px;
-        font-size: 16px;
-        font-weight: 600;
-        color: $bg-color-1;
-        background-color: $text-color-1;
+      .btn-respo {
+        display: none;
       }
+      .close-click {
+        display: none;
+      }
+      .logo-image-media {
+        display: block;
+        #image-nav {
+          display: none;
+        }
+        #title-left-nav {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .item-rigth {
+    flex: 1;
+    height: 60px;
+    @include flex-box(0px, row, center, center);
+    #btn-conn-nav {
+      cursor: pointer;
+      width: 160px;
+      height: 40px;
+      letter-spacing: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      color: $bg-color-1;
+      background-color: $text-color-1;
     }
   }
 }
@@ -263,6 +354,7 @@
       height: 60px;
       @include flex-box(0px, row, center, center);
       position: relative;
+
       #ul-nav {
         @include flex-box(15px, row, center, center);
         width: 85%;
@@ -282,6 +374,15 @@
           border: 1px solid gray;
           border-radius: 5px;
         }
+      }
+      .btn-respo {
+        display: none;
+      }
+      .close-click {
+        display: none;
+      }
+      .logo-imge {
+        display: none;
       }
     }
     .item-rigth {

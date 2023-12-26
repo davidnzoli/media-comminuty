@@ -8,6 +8,8 @@ import Contact from "../components/Contact";
 import { NavLink } from "react-router-dom";
 import NavigateBeforeOutlinedIcon from "@mui/icons-material/NavigateBeforeOutlined";
 import NavigateNextOutlinedIcon from "@mui/icons-material/NavigateNextOutlined";
+import { MenuRespo } from "../components/MenuRespo";
+import Navbar from "./Navbar";
 
 function Defile() {
   const Clicked = () => {
@@ -22,7 +24,7 @@ function Defile() {
       style={{
         position: "fixed",
         right: "5px",
-        top: "540px",
+        top: "520px",
         borderRadius: "100%",
         border: "none",
         padding: "5px",
@@ -70,8 +72,11 @@ export default function Body() {
   // }, []);
 
   return (
-    <div className="cont-body" style={{ position: "relative" }}>
+    <div className="cont-body">
       {normal && <Defile />}
+
+      {/* {activation && <MenuRespo />} */}
+
       <div className="some-texte-accueil">
         <h1 id="tilte-accueil-1">
           <span id="span-accueil">Media comminuty eplm</span> vient pour vous
@@ -87,8 +92,8 @@ export default function Body() {
         </p>
       </div>
       <div className="btn-material">
-        <Button variant="text">Creez compte</Button>
-        <Button variant="outlined">Connexion</Button>
+        <Button variant="text">Reservation</Button>
+        <Button variant="outlined">Contactez-nous</Button>
       </div>
       <div className="grid-cont-4">
         {GridItems.map((el) => {
@@ -166,6 +171,8 @@ export default function Body() {
         </div>
       </div>
       <Contact />
+      {/* <MenuRespo active={activation} setactive={setactivation} />
+      <Navbar action={activation} setaction={setactivation} /> */}
     </div>
   );
 }

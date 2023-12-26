@@ -7,6 +7,20 @@ $bluecolor: blue;
 [data-theme="dark"] {
   background-color: rgb(71, 70, 70);
   color: rgb(171, 169, 169);
+  .contact-component {
+    &:hover {
+      box-shadow: -1px 1px 3px rgb(243, 242, 242);
+    }
+  }
+  .glob-visions {
+    .glob-vision-left {
+      .element-glob-vision-left {
+        #para-vision {
+          color: white;
+        }
+      }
+    }
+  }
 }
 body {
   margin: 0px;
